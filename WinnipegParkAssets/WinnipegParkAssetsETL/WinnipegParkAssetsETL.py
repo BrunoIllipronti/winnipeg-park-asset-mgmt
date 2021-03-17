@@ -21,7 +21,7 @@ class DBOperations():
         self.__pwd = '##########'
 
     def initialize_db(self):
-        """ Initialize DB engine """            
+        """ Initialize DB engine """
         try:
             # Connect to Azure DB
             engine = sqlalchemy.create_engine(f'mssql://{self.__uid}:{self.__pwd}@{self.__server}/{self.__db}?Driver={self.__driver}?MARS_Connection=Yes')
